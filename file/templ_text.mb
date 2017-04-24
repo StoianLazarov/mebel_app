@@ -1,0 +1,43 @@
+        x = 
+        kant_x = 
+        y = 
+        kant_y = 
+        count_el = 
+        self.count_element += br_stran
+
+        if x > y:
+            l_el = x
+            l_kant = kant_x
+            s_el = y
+            s_kant = kant_y
+        else:
+            l_el = y
+            l_kant = kant_y
+            s_el = x
+            s_kant = kant_x
+        return dict(
+                long_el=l_el,
+                short_el=s_el,
+                k_long=l_kant,
+                k_short=s_kant,
+                br_el=count_el,
+                )
+
+def set_dict(temp_x, temp_y, kant_x, kant_y, count_el):
+    if temp_x > temp_y:
+        long_el = temp_x
+        long_kant = kant_x
+        short_el = y
+        short_kant = kant_y
+    else:
+        long_el = temp_y
+        long_kant = kant_y
+        short_el = temp_x
+        short_kant = kant_x
+	return dict=(
+                long_el=long_el,
+                short_el=short_el,
+                k_long=long_kant,
+                k_short=short_kant,
+                br_el=count_el,
+				)

@@ -1,0 +1,11 @@
+
+ENTET YOUR DATA
+=============================
+vid na shkafovete:
+    1.dolni
+width (.mm)= 500
+height (.mm) = 850
+depth (.mm) = 500
+kant (0, 0,8, 2 .mm)= 2
+d_rab_plot (.mm) = 32
+d_ploskost (.mm) = 18
