@@ -26,7 +26,7 @@ result_elements = {
             'long_el': 787,
             'short_el': 366}}
 header_table = '''
-detail | long | short | k_long | k_short | br|
+long|short|k_long|k_short|br|detail
 '''
 content_table= '''
 | {long_el} | {short_el} | {k_long} | {k_short} | {br_el}|
@@ -36,15 +36,26 @@ content_table= '''
 # for val in values:
 #     if isinstance(val,dict):
 #         print(content_table.format(**val))
-test_det = {'most': {
-    'br_el': 2,
-    'k_long': 0,
-    'k_short': 0,
-    'long_el': 514,
-    'short_el': 100}}
-detail = list(test_det.keys())[0]
-print(detail)
+# test_det = {'most': {
+#     'br_el': 2,
+#     'k_long': 0,
+#     'k_short': 0,
+#     'long_el': 514,
+#     'short_el': 100}}
+# detail = list(test_det.keys())[0]
+# print(detail)
 test_content_table= '''
-{detail} | {long_el} | {short_el} | {k_long} | {k_short} | {br_el}|
+{long_el} | {short_el} | {k_long} | {k_short} |{br_el}|\t-{detail}
 '''
+print(header_table)
+k = result_elements.items()
+for i in k:
+    if isinstance(i[1], dict):
+        print(test_content_table.format(
+            detail=i[0],
+            long_el=i[1]['long_el'],
+            short_el=i[1]['short_el'],
+            k_long=i[1]['k_long'],
+            k_short=i[1]['k_short'],
+            br_el=i[1]['br_el']))
 
